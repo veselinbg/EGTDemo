@@ -1,0 +1,29 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Messages";
+}
+<input type="hidden" value="@ViewData["MessageHubUrl"]" id="messageHubUrl" />
+<div class="container">
+    <div class="row">&nbsp;</div>
+    <div class="row">
+        <div class="col-2">Message</div>
+        <div class="col-5"><textarea id="messageInput" maxlength="1000"></textarea></div>
+        <div class="col-1">
+            <input type="button" id="sendButton" value="Send" class="btn btn-info" />
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <hr />
+        <b>Messages</b>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <div id="messagesList">
+
+        </div>
+    </div>
+</div>
